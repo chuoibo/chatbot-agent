@@ -30,7 +30,7 @@ Always cite sources. Be concise and accurate.
 - Preserve document structure (headings, lists, tables)
 
 ### 2.3 Late-Chunking + semantic chunking
-- **Chunk size**: 8912 tokens (Using jinai)
+- **Chunk size**: 8192 tokens (Using jinai)
 
 ### 2.4 Metadata
 Each chunk includes:
