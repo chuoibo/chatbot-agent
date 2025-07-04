@@ -1,6 +1,6 @@
 # AI Chatbot Pipeline Documentation
 ## Overview Proposed Workflow
-![Image](https://github.com/user-attachments/assets/be93d637-d95e-4e49-a245-d840e1504f36)
+![Image](images/chatbot_pipeline.png)
 
 ## Detailed Pipeline
 ## 1. Chatbot Configuration
@@ -17,7 +17,7 @@ You are a professional assistant. Answer only from provided documents.
 Always cite sources. Be concise and accurate.
 ```
 
-![Image](https://github.com/user-attachments/assets/99fcd53d-45e7-4235-8cf2-e1301ec6942b)
+![Image](images/chatbot_config.png)
 
 ## 2. Document Processing
 
@@ -39,7 +39,7 @@ Each chunk includes:
 - Section info
 - Position
 
-![Image](https://github.com/user-attachments/assets/099488b6-51ea-4b6d-8a53-ca7196480323)
+![Image](images/process_doc_&_chunk.png)
 
 ## 3. Embedding & Storage
 
@@ -52,7 +52,7 @@ Each chunk includes:
 - Store embeddings with metadata
 - Separate namespace per chatbot
 
-![Image](https://github.com/user-attachments/assets/3d074a58-d9be-42eb-804f-628bb0f7deb6)
+![Image](images/embedding.png)
 
 ## 4. Query Processing
 
@@ -69,7 +69,7 @@ Each chunk includes:
   → ["What's the price?", "What's the delivery time?"]
   ```
 
-![Image](https://github.com/user-attachments/assets/38d5a7ff-54ff-4c44-962e-21ea0f9ff452)
+![Image](images/query_processing.png)
 
 ## 5. Multi-RAG Retrieval
 
@@ -94,7 +94,7 @@ final_score = (0.6 × semantic_score) + (0.4 × keyword_score)
 - Deduplicate information
 - Order logically
 
-![Image](https://github.com/user-attachments/assets/be91be9e-3493-42ad-914d-0d78f6c08055)
+![Image](images/RAG.png)
 
 ## 6. Response Generation
 
@@ -110,7 +110,7 @@ Instructions: Answer only from context, cite sources
 - Temperature: 0.3-0.5
 - Generate response with citations
 
-![Image](https://github.com/user-attachments/assets/f1273634-f9a5-49c7-a629-077e98b83528)
+![Image](images/LLM_Gen.png)
 
 ## 7. Validation
 
@@ -123,7 +123,7 @@ Instructions: Answer only from context, cite sources
 ### 7.2 Regeneration
 If validation fails → Modify and regenerate
 
-![Image](https://github.com/user-attachments/assets/ebe22194-2ee9-49ff-9bf8-5b6d3ab3c7d6)
+![Image](images/validation.png)
 
 ## 8. Output
 
@@ -136,7 +136,7 @@ If validation fails → Modify and regenerate
 - Query count  
 - Error rate
 
-![Image](https://github.com/user-attachments/assets/bae9b5ff-6634-4feb-8e96-33d159694eea)
+![Image](images/monitor.png)
 
 ## Pipeline Flow Summary
 
