@@ -166,7 +166,7 @@ The **Master Orchestrator Agent** receives these images and manages the entire p
 
 #### 2. **Orchestrator → Document Analysis Agent (Step 1)**
 
-**What happens:** The Document Analysis Agent (using Gemini Vision API) scans all 3 documents
+**What happens:** The Document Analysis Agent scans all 3 documents
 
 **Extracts:**
 - Full name from each document
@@ -199,8 +199,6 @@ Birth Certificate:
 **2a - Validation Agent checks:**
 - ✅ Are all required fields present? (name, DOB, ID number)
 - ✅ Do names match? ("John Smith" on all 3 documents?)
-- ✅ Is the person 18+ years old?
-- ✅ Is graduation date after birth date?
 - ✅ Are ID numbers in correct format?
 
 **2b - Fraud Detection Agent analyzes (simultaneously):**
@@ -227,13 +225,12 @@ The Decision Agent receives:
 #### 5. **Three Possible Paths:**
 
 **A. Auto Approve** - Everything looks perfect
-- Student is eligible
+- User is eligible
 - Documents are authentic
 - Goes straight to database
 
 **B. Auto Reject** - Clear problems found
 - Missing required info
-- Age under 18
 - Obvious fake document
 - Goes to database with rejection reason
 
